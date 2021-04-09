@@ -19,7 +19,7 @@ export default function () {
             file:http.file(fileContent)
         }
 
-        var res = http.post(uploadUrl, data, params);
+        var res = http.post(uploadUrl, fileContent, params);
 
         check(res,{
             "Upload Excel 200": (res) => res.status === 200
